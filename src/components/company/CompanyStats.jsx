@@ -1,16 +1,13 @@
 export default function CompanyStats({ stats }) {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-      {stats.map((item, i) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {stats.map((item, idx) => (
         <div
-          key={i}
-          className="bg-card-light dark:bg-card-dark p-6 rounded-xl 
-                     border border-gray-200 dark:border-gray-800 shadow-sm"
+          key={idx}
+          className="bg-card-light rounded-xl p-6 border border-border-light shadow-sm"
         >
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
-            {item.label}
-          </h3>
-          <p className="text-3xl font-bold text-gray-900 dark:text-white">{item.value}</p>
+          <p className="text-sm text-text-secondary-light">{item.label}</p>
+          <p className="text-2xl font-bold mt-1">{item.value}</p>
         </div>
       ))}
     </div>
